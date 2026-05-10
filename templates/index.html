@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+    <title>RAG Chatbot</title>
+
+</head>
+
+
+<body>
+
+
+    <h1>Semantic Search RAG Chatbot</h1>
+
+
+    <!-- ========================================= -->
+    <!-- Question Form -->
+    <!-- ========================================= -->
+
+    <form method="POST">
+
+
+        <textarea
+
+            name="user_question"
+
+            rows="5"
+
+            cols="60"
+
+            placeholder="Ask your question here..."
+
+        ></textarea>
+
+
+        <br><br>
+
+
+        <button type="submit">
+
+            ASK
+
+        </button>
+
+
+    </form>
+
+
+    <br><br>
+
+
+    <!-- ========================================= -->
+    <!-- Answer Section -->
+    <!-- ========================================= -->
+
+    <h2>Answer:</h2>
+
+
+    <textarea
+
+        rows="15"
+
+        cols="80"
+
+        readonly
+
+    >{{ answer }}</textarea>
+
+
+</body>
+
+
+</html>
