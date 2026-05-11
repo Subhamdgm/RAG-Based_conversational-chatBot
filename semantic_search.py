@@ -2,12 +2,13 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 from chunking import create_chunks
 from embedding import (create_doc_embedding,create_query_embedding)
-
+from pdf_reader import extract_text_from_pdf
 #query="what is Cybersecurity"
 def top_k_similar(query,top_k=3):
 
     query_embedding=create_query_embedding(query)
-    chunks=create_chunks("document.txt")
+    text=extract_text_from_pdf("sample_doc_pdf.pdf")
+    chunks=create_chunks(text)
     doc_embedding=create_doc_embedding(chunks)
     similarities= cosine_similarity(doc_embedding,[query_embedding])
     #since query embed is 1d and doc embed is 2d

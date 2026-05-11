@@ -2,11 +2,11 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import numpy as np
-def create_chunks(file_path):
-    with open(file_path,
-            "r",
-            encoding="utf-8") as file:
-        text = file.read()
+def create_chunks(text):
+    # with open(file_path,
+    #         "r",
+    #         encoding="utf-8") as file:
+    #     text = file.read()
 
     splitter=RecursiveCharacterTextSplitter(
         chunk_size=300,

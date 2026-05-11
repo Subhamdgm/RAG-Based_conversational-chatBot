@@ -5,3 +5,4 @@ langchain-text-splitters
 sentence-transformers
 scikit-learn
 python-dotenv
+pypdf
